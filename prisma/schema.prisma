@@ -14,11 +14,6 @@ generator pothos {
   output       = "../src/generated/objects.d.ts"
 }
 
-generator pothosCrud {
-  provider            = "prisma-generator-pothos-codegen"
-  generatorConfigPath = "../prisma-generator-pothos-codegen.js"
-}
-
 model User {
   id   Int    @id @default(autoincrement())
   name String

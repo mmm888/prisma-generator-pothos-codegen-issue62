@@ -1,10 +1,11 @@
-import { generateAllCrud } from './__generated__/autocrud'
 import { builder, prisma } from './builder'
 
-generateAllCrud()
-
-builder.queryType({})
-builder.mutationType({})
+builder.prismaObject('User', {
+    fields: (t) => ({
+      id: t.exposeID('id'),
+      name: t.exposeString('name'),
+    })
+})
 
 builder.queryType({
     fields: (t) => ({
