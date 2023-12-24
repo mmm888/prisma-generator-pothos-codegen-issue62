@@ -1,0 +1,25 @@
+{
+  "name": "prisma-generator-pothos-codegen-issue62",
+  "version": "1.0.0",
+  "scripts": {
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate",
+    "start": "node -r @swc-node/register ./src/index.ts",
+    "type": "tsc --noEmit"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.9.5",
+    "@pothos/core": "^3.41.0",
+    "@pothos/plugin-prisma": "^3.63.0",
+    "@prisma/client": "^5.7.1",
+    "@swc-node/register": "^1.6.8",
+    "@swc/core": "^1.3.101",
+    "graphql": "^16.8.1",
+    "prisma": "^5.7.1",
+    "prisma-generator-pothos-codegen": "^0.6.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}

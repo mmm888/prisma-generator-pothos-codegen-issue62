@@ -1,0 +1,25 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator pothos {
+  provider     = "prisma-pothos-types"
+  // Match client output location from above
+  clientOutput = ".prisma/client"
+  output       = "../src/generated/objects.d.ts"
+}
+
+generator pothosCrud {
+  provider            = "prisma-generator-pothos-codegen"
+  generatorConfigPath = "../prisma-generator-pothos-codegen.js"
+}
+
+model User {
+  id   Int    @id @default(autoincrement())
+  name String
+}
