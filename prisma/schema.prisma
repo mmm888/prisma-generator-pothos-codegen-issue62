@@ -10,7 +10,7 @@ generator client {
 generator pothos {
   provider     = "prisma-pothos-types"
   // Match client output location from above
-  clientOutput = ".prisma/client"
+  clientOutput = "@prisma/client"
   output       = "../src/generated/objects.d.ts"
 }
 
